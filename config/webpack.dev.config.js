@@ -4,7 +4,7 @@ const baseConfig = require('./webpack.base.config')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const PORT = 3001
+const PORT = 3030
 
 module.exports = merge(baseConfig, {
   plugins: [
