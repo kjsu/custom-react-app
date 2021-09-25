@@ -10,20 +10,18 @@ module.exports = merge(baseConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: './config/index.html',
-      // filename: './index.html',
+      filename: './index.html',
     }),
   ],
   mode: 'development',
   devtool: 'cheap-module-source-map',
   output: {
     filename: 'bundle.js',
+    publicPath: `http://localhost:${PORT}/`,
   },
   devServer: {
     port: PORT,
     historyApiFallback: true,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    },
     contentBase: path.resolve('public'),
   },
   optimization: {
