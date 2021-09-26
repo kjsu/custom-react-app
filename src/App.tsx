@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import appAction from '~/actions/appAction'
+import { BrowserRouter } from 'react-router-dom'
+import Router from '~/views/components/Router'
 
 export interface AppConfig {
   ajax: object
@@ -22,7 +24,9 @@ const App: React.FC<Props> = ({ config }) => {
 
   return (
     <>
-      hello world
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </>
   )
 }
