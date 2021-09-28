@@ -6,6 +6,7 @@ const Home: React.FC = () => {
   const test6 = "check";;;;;;;;;;;;;;;;
           const test7 = "check";;;;;;;;;;;;;;;;
           const test8 = "check";;;;;;;;;;;;;;;;
+          const test9 = "check";;;;;;;;;;;;;;;;
 
   return (
     <>home</>
