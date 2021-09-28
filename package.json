@@ -6,12 +6,17 @@
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.config.js",
     "build": "webpack --config config/webpack.prod.config.js",
-    "lint": "tslint --project .",
-    "lint:fix": "tslint --fix --project .",
-    "lint:ts": "tslint --fix src/**/*.{ts,tsx} -p tsconfig.json",
-    "lint:style": "stylelint src/**/*.{scss,ts,css,sass,less,tsx}",
-    "format": "prettier --write src/**/*.{ts,tsx,scss,md}",
-    "formatAndFix": "npm run format && npm run lint:ts && npm run style"
+    "lint": "eslint src --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "axios": "^0.21.4",
@@ -45,7 +50,6 @@
     "lint-staged": "^11.1.2",
     "mini-css-extract-plugin": "^2.3.0",
     "prettier": "2.4.1",
-    "pretty-quick": "^3.1.1",
     "react-svg-loader": "^3.0.3",
     "sass-loader": "^12.1.0",
     "ts-loader": "^9.2.6",
