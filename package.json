@@ -5,12 +5,13 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.config.js",
-    "build": "webpack --config config/webpack.prod.config.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "build": "webpack --config config/webpack.prod.config.js",
+    "lint": "tslint --project .",
+    "lint:fix": "tslint --fix --project .",
+    "lint:ts": "tslint --fix src/**/*.{ts,tsx} -p tsconfig.json",
+    "lint:style": "stylelint src/**/*.{scss,ts,css,sass,less,tsx}",
+    "format": "prettier --write src/**/*.{ts,tsx,scss,md}",
+    "formatAndFix": "npm run format && npm run lint:ts && npm run style"
   },
   "dependencies": {
     "axios": "^0.21.4",
