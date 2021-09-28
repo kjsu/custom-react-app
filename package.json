@@ -5,18 +5,20 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.config.js",
-    "build": "webpack --config config/webpack.prod.config.js",
-    "lint": "eslint src --fix"
+    "build": "webpack --config config/webpack.prod.config.js"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .tsx --ext .ts ./src --fix"
+    ],
+    "./src/**": [
+      "prettier --write ."
+    ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "src/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix"
-    ]
   },
   "dependencies": {
     "axios": "^0.21.4",
