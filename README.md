@@ -15,7 +15,7 @@
 - `tsx`, `ts`, `jsx`, `js`, `scss`, `css`, `svg`, `png` 파일이 번들링 되도록 구현
 - `linter`가 `git hook`에서 동작하여 코드 품질 관리가 자동화되도록 구현
 - API 호출 대비 `axios` 환경 구현
-- atomic design, Action/Service 디자인 패턴 활용 (Wiki)
+- atomic design, Action/Service 디자인 패턴 활용 ([Wiki](https://github.com/kjsu/custom-react-app/wiki/%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4))
 
 ### Tech Stack
 - React 17, React Router 5, TypeScript 4, Recoil 0.4, sass
