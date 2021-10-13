@@ -1,9 +1,4 @@
 # custom-react-app
-### Setup
-1. 프로젝트 최상위 디렉토리에서 `yarn` or `npm i` 명령어로 module 설치
-2. `yarn start` or `npm start`로 `webpack-dev-server` 실행
-3. URL `http://localhost:3030` 접근해서 페이지 뜨는 것 확인
----
 ### 프로젝트 설명
 - React Web Application의 초기 필수 환경을 구현한 프로젝트
 - React 기반 프로젝트를 새로 구축할 때 초기 환경을 대체할 목적으로 구현
@@ -26,3 +21,8 @@
 `linter`가 동작하도록 구현했으나 현재 오류 발생해서 수정 중(`f/eslint`)
 - Action/Service 디자인 패턴을 활용하면서 `React.FC`가 아닌 전역에서 `recoil`을 사용하려고  
 `RecoilExternalStatePortal.tsx`를 적용했지만 현재 오류 발생해서 수정 중(`f/recoil`)
+---
+### Setup
+1. 프로젝트 최상위 디렉토리에서 `yarn` or `npm i` 명령어로 module 설치
+2. `yarn start` or `npm start`로 `webpack-dev-server` 실행
+3. URL `http://localhost:3030` 접근해서 페이지 뜨는 것 확인
